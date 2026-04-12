@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK GAJAH BERANG | Anti-Bullying Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #ffffff; }
+        .school-logo { width: 45px; height: 45px; object-fit: contain; }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #f0f7ff 0%, #ffffff 100%);
+        }
+    </style>
+</head>
+<body class="hero-gradient">
+
+    <nav class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <img src="logo.png" alt="SMKGB Logo" class="school-logo">
+            <span class="text-xl font-black text-gray-900 tracking-tight text-indigo-600">SMK GAJAH BERANG</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-8 text-sm font-bold text-gray-500 uppercase tracking-widest">
+            <a href="index.html" class="text-indigo-600">Home</a>
+            <a href="report.html" class="hover:text-indigo-600 transition">Report Case</a>
+            <a href="stats.html" class="hover:text-indigo-600 transition">Statistics</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <a href="login.html" class="text-sm font-bold text-gray-700 hover:text-indigo-600">Login</a>
+            <a href="signup.html" class="bg-indigo-600 text-white px-6 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition">Sign Up</a>
+        </div>
+    </nav>
+
+    <section class="max-w-7xl mx-auto px-8 py-20 text-center">
+        <div class="inline-block px-4 py-1.5 bg-indigo-50 text-indigo-600 rounded-full text-xs font-black uppercase tracking-widest mb-6">
+            Official School Safety Initiative
+        </div>
+        <h1 class="text-6xl md:text-7xl font-black text-gray-900 leading-tight mb-8">
+            Building a <span class="text-indigo-600">Bully-Free</span> <br>School Environment
+        </h1>
+        <p class="max-w-2xl mx-auto text-gray-500 text-lg leading-relaxed mb-12">
+            Welcome to the official <strong>SMK GAJAH BERANG</strong> safety platform. Use this secure portal to report incidents, view campus safety data, and find support. Together, we can make a difference.
+        </p>
+        
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+            <button onclick="window.location.href='report.html'" class="w-full md:w-auto bg-red-500 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl shadow-red-200 hover:bg-red-600 hover:-translate-y-1 transition-all">
+                Report an Incident Now
+            </button>
+            <button onclick="window.location.href='stats.html'" class="w-full md:w-auto bg-gray-900 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl shadow-gray-200 hover:bg-black hover:-translate-y-1 transition-all">
+                View Safety Data
+            </button>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-8 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-gray-100 border border-gray-50">
+                <div class="w-12 h-12 bg-amber-50 text-amber-500 rounded-2xl flex items-center justify-center mb-6 text-2xl">🔒</div>
+                <h3 class="text-xl font-black text-gray-900 mb-4">100% Confidential</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Choose to report anonymously. Your identity is protected by SMKGB school-grade security protocols.</p>
+            </div>
+
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-gray-100 border border-gray-50">
+                <div class="w-12 h-12 bg-green-50 text-green-500 rounded-2xl flex items-center justify-center mb-6 text-2xl">⚡</div>
+                <h3 class="text-xl font-black text-gray-900 mb-4">Fast Response</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">Direct notification to the counseling department ensures cases are addressed within 24 hours.</p>
+            </div>
+
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-gray-100 border border-gray-50">
+                <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center mb-6 text-2xl">📊</div>
+                <h3 class="text-xl font-black text-gray-900 mb-4">Data Driven</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">We use incident data to identify bullying "hotspots" and implement preventive measures at SMKGB.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-12 border-t border-gray-100 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+        © 2026 SMK GAJAH BERANG · Labor Omnia Vincit
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

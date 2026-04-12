@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Report | SafeCampus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #f8fafc; }
+        .input-focus { transition: all 0.2s ease; }
+        .input-focus:focus { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body class="py-10">
+
+    <div class="max-w-3xl mx-auto px-4">
+        <a href="dashboard.html" class="inline-flex items-center text-gray-500 hover:text-indigo-600 mb-8 transition">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            Back to Dashboard
+        </a>
+
+        <div class="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/60 overflow-hidden border border-slate-100">
+            <div class="bg-indigo-600 p-10 text-white">
+                <h1 class="text-3xl font-bold">New Incident Report</h1>
+                <p class="opacity-80 mt-2">Please fill in the details accurately. Your report helps keep our school safe.</p>
+            </div>
+
+            <form id="bullyForm" class="p-10 space-y-8">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Aggressor Name(s)</label>
+                        <input type="text" id="aggressorName" placeholder="Who was involved?" required 
+                               class="input-focus w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">Incident Date</label>
+                        <input type="date" id="incidentDate" required 
+                               class="input-focus w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:border-indigo-500 text-gray-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-3">Severity Level</label>
+                    <div class="grid grid-cols-3 gap-4">
+                        <label class="relative cursor-pointer">
+                            <input type="radio" name="severity" value="Mild" class="peer hidden" checked>
+                            <div class="text-center py-3 border-2 border-gray-100 rounded-2xl peer-checked:border-green-500 peer-checked:bg-green-50 transition font-semibold text-gray-500 peer-checked:text-green-600">
+                                Mild
+                            </div>
+                        </label>
+                        <label class="relative cursor-pointer">
+                            <input type="radio" name="severity" value="Moderate" class="peer hidden">
+                            <div class="text-center py-3 border-2 border-gray-100 rounded-2xl peer-checked:border-amber-500 peer-checked:bg-amber-50 transition font-semibold text-gray-500 peer-checked:text-amber-600">
+                                Moderate
+                            </div>
+                        </label>
+                        <label class="relative cursor-pointer">
+                            <input type="radio" name="severity" value="Severe" class="peer hidden">
+                            <div class="text-center py-3 border-2 border-gray-100 rounded-2xl peer-checked:border-red-500 peer-checked:bg-red-50 transition font-semibold text-gray-500 peer-checked:text-red-600">
+                                Severe
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Detailed Description</label>
+                    <textarea id="description" rows="5" placeholder="Tell us exactly what happened..." required 
+                              class="input-focus w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-2xl outline-none focus:border-indigo-500"></textarea>
+                </div>
+
+                <div class="pt-4">
+                    <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-5 rounded-2xl shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition-all active:scale-[0.98]">
+                        Submit Official Report
+                    </button>
+                    <p class="text-center text-xs text-gray-400 mt-4 italic">This report will be sent to the student affairs office for review.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
